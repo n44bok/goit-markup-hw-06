@@ -337,6 +337,7 @@ section {
 }
 
 .form-field input {
+  outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
@@ -356,8 +357,8 @@ section {
   fill: var(--accent-color);
 }
 
-.form-field:hover input,
-.form-field:focus input {
+.form-field input:hover,
+.form-field input:focus {
   border: 1px solid var(--accent-color);
 }
 
@@ -390,6 +391,7 @@ section {
 }
 
 .comment {
+  outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   height: 120px;
@@ -411,8 +413,8 @@ section {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.textarea-field:hover textarea,
-.textarea-field:focus textarea {
+.textarea-field textarea:hover,
+.textarea-field textarea:focus {
   border: 1px solid var(--accent-color);
 }
 
