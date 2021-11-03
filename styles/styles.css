@@ -289,6 +289,7 @@ section {
 }
 
 .close-modal-icon {
+  outline: none;
   display: flex;
   position: absolute;
   top: 8px;
@@ -298,9 +299,15 @@ section {
   cursor: pointer;
   align-items: center;
   border-radius: 50%;
-  color: var(--white-text-color);
+  fill: var(--primary-text-color);
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-modal-icon:hover,
+.close-modal-icon:focus {
+  fill: var(--accent-color);
 }
 
 .modal-title {
@@ -352,18 +359,9 @@ section {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field:hover .form-modal-icon,
-.form-field:focus .form-modal-icon {
-  fill: var(--accent-color);
-}
-
 .form-field input:hover,
 .form-field input:focus {
   border: 1px solid var(--accent-color);
-}
-
-.form-field:focus {
-  outline: none;
 }
 
 .form-modal-icon {
@@ -372,6 +370,11 @@ section {
   margin-left: 12px;
   fill: var(--primary-text-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:hover .form-modal-icon,
+.form-field:focus .form-modal-icon {
+  fill: var(--accent-color);
 }
 
 .textarea-field {
@@ -425,11 +428,6 @@ section {
 
 .checkbox {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -451,6 +449,7 @@ section {
   background-image: url(../images/check.svg);
   background-size: contain;
   background-origin: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .policy-field {
@@ -494,7 +493,16 @@ section {
   cursor: pointer;
   color: #ffffff;
   background-color: #2196f3;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.form-button:hover,
+.form-button:focus {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
 /*---------- features -------------*/
 
 .features-icons {
